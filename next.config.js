@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  images: {
+    domains: ['example-apis.vercel.app'],
+  },
   compiler: {
     styledComponents: true,
   },
@@ -10,9 +13,6 @@ const nextConfig = {
       issuer: /\.[jt]sx?$/,
       use: ["@svgr/webpack"],
     });
-
     return config;
   },
 };
-
-module.exports = nextConfig;
