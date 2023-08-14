@@ -18,7 +18,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>Georgios-Sergios-Gallerios</h1>
+      <h1>Georgios-Sergios-Smailios-Gallerios</h1>
       <Spotlight
         imageSource={spotlightPiece.imageSource}
         artist={spotlightPiece.artist}
