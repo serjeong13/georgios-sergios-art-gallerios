@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import Image from "next/image";
+import ArtPieces from "../components/ArtPieces";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -14,21 +15,8 @@ export default function App() {
 
   return (
     <div>
-      <h1>Georgios-Sergios-Horses</h1>
-      <ul>
-        {data.map((artPiece) => (
-          <li key={artPiece.id}>
-            <h2>{artPiece.title}</h2>
-            <Image
-              src={artPiece.image}
-              alt={artPiece.title}
-              width={200}
-              height={200}
-            />
-            <p>{artPiece.description}</p>
-          </li>
-        ))}
-      </ul>
+      <h1>Georgios-Sergios-Gallerios</h1>
+      <ArtPieces pieces={data} />
     </div>
   );
 }
