@@ -1,10 +1,13 @@
 import ArtPiecePreview from "../ArtPiecePreview";
+import { useArt } from "../../contexts/ArtContext";
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces() {
+  const artData = useArt();
+
   return (
     <ul>
-      {pieces.map((piece) => (
-        <li key={piece.id}>
+      {artData.map((piece) => (
+        <li key={piece.slug}>
           <ArtPiecePreview
             image={piece.imageSource}
             title={piece.name}

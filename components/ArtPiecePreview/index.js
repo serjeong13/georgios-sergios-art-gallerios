@@ -8,5 +8,4 @@ export default function ArtPiecePreview({ image, title, artist }) {
       <p>By: {artist}</p>
     </div>
   );
-  console.log(pieces);
 }

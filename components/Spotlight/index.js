@@ -1,16 +1,22 @@
 import Image from "next/image";
 
-export default function Spotlight({ imageSource, artist }) {
+export default function Spotlight({ data }) {
+  function getRandomArtPiece(artPieces) {
+    return artPieces[Math.floor(Math.random() * artPieces.length)];
+  }
+
+  const spotlightPiece = getRandomArtPiece(data);
+
   return (
     <div>
       <h2>Spotlight</h2>
       <Image
-        src={imageSource}
-        alt={`Art by ${artist}`}
+        src={spotlightPiece.imageSource}
+        alt={`Artwork by ${spotlightPiece.artist}`}
         width={400}
         height={400}
       />
-      <p>By: {artist}</p>
+      <p>By: {spotlightPiece.artist}</p>
     </div>
   );
 }
