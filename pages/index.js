@@ -1,19 +1,7 @@
-import useSWR from "swr";
-import { useRouter } from "next/router";
 import ArtPieces from "../components/ArtPieces";
 import Spotlight from "../components/Spotlight";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-export default function HomePage() {
-  const { data, error, isLoading } = useSWR(
-    "https://example-apis.vercel.app/api/art",
-    fetcher
-  );
-
-  if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading...</div>;
-
+export default function HomePage({ data }) {
   const spotlightPiece = getRandomArtPiece(data);
 
   return (
