@@ -2,17 +2,16 @@ import ArtPiecePreview from "../ArtPiecePreview";
 import useArt from "../../contexts/ArtContext";
 import Link from "next/link";
 
-export default function ArtPieces() {
-  const {artData} = useArt();
+export default function ArtPieces({pieces}) {
 
-  if (!Array.isArray(artData)) {
+  if (!Array.isArray(pieces)) {
     return <div>Loading...</div>;
   }
 
 
   return (
     <ul>
-      {artData.map((piece) => (
+      {pieces.map((piece) => (
         <li key={piece.slug}>
           <ArtPiecePreview
             image={piece.imageSource}
