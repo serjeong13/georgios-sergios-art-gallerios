@@ -1,4 +1,3 @@
-import ArtPieces from "../components/ArtPieces";
 import Spotlight from "../components/Spotlight";
 import { useArt } from "../contexts/ArtContext";
 

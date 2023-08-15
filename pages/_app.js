@@ -18,7 +18,7 @@ export default function OurApp({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ArtProvider data={data}>
-        <Component {...pageProps} pieces={data} />
+        <Component {...pageProps} />
         <Navigation />
       </ArtProvider>
     </>
