@@ -3,7 +3,12 @@ import useArt from "../../contexts/ArtContext";
 import Link from "next/link";
 
 export default function ArtPieces() {
-  const artData = useArt();
+  const {artData} = useArt();
+
+  if (!Array.isArray(artData)) {
+    return <div>Loading...</div>;
+  }
+
 
   return (
     <ul>
@@ -11,7 +16,7 @@ export default function ArtPieces() {
         <li key={piece.slug}>
           <ArtPiecePreview
             image={piece.imageSource}
-            alt={piece.slug}
+            slug={piece.slug}
             title={piece.name}
             artist={piece.artist}
           />
