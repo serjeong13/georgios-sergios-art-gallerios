@@ -6,14 +6,17 @@ import useArt from "../../contexts/ArtContext";
 export default function DetailedPage() {
   const router = useRouter();
   const slug = router.query.slug;
-
-  const pieces = useArt();
+  const {artData} = useArt();
 
   if (!router.isReady) {
     return <div>Loading...</div>;
   }
 
-  let piece = (slug && pieces?.find((piece) => piece.slug === slug)) || null;
+  if (!Array.isArray(artData)) {
+    return <div>Error: Art data is not available!</div>;
+  }
+
+  let piece = artData.find((piece) => piece.slug === slug) || null;
 
   if (!piece) {
     return <div>Art Piece Not Found</div>;

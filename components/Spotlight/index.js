@@ -1,11 +1,22 @@
 import Image from "next/image";
+import useArt from "../../contexts/ArtContext";
 
-export default function Spotlight({ data }) {
+export default function Spotlight() {
+const {artData} = useArt();
+
   function getRandomArtPiece(artPieces) {
     return artPieces[Math.floor(Math.random() * artPieces.length)];
   }
 
-  const spotlightPiece = getRandomArtPiece(data);
+  if (!artData || artData.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const spotlightPiece = getRandomArtPiece(artData);
+
+  if (!spotlightPiece) {
+    return <div>No Art Piece Selected</div>;
+  }
 
   return (
     <div>
