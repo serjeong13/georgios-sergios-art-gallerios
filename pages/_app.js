@@ -1,4 +1,4 @@
-import GlobalStyle from "../styles";
+import GlobalStyle from "../styles/GlobalStyle";
 import useSWR from "swr";
 import { ArtProvider } from "../contexts/ArtContext";
 import Layout from "../components/Layout";

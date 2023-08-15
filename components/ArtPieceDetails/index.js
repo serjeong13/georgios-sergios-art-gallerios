@@ -12,10 +12,10 @@ export default function ArtPieceDetails({
     <div>
       <Image src={imageSource} alt={name} width={400} height={400} />
       <ul>
-        <li>Title: {name}</li>
-        <li>Artist: {artist}</li>
+        <li>Name: {name}</li>
+        <li>Crazy Artist: {artist}</li>
         <li>Year: {year}</li>
-        <li>Genre: {genre}</li>
+        <li>Style: {genre}</li>
       </ul>
       <Link href={"/art-pieces"}>Go back</Link>
     </div>

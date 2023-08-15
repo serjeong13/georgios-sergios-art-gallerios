@@ -18,5 +18,12 @@
   "vueIndentScriptAndStyle": false,
   "endOfLine": "lf",
   "embeddedLanguageFormatting": "auto",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "plugins": ["prettier-plugin-styled-components"],
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": { "parser": "babel" }
+    }
+  ]
 }
