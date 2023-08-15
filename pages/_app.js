@@ -1,7 +1,7 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import { ArtProvider } from "../contexts/ArtContext";
-import Navigation from "../components/Navigation";
+import Layout from "../components/Layout";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -19,7 +19,7 @@ export default function OurApp({ Component, pageProps }) {
       <GlobalStyle />
       <ArtProvider data={data}>
         <Component {...pageProps} />
-        <Navigation />
+        <Layout />
       </ArtProvider>
     </>
   );

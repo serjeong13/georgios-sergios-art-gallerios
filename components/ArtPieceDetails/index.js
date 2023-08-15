@@ -8,7 +8,7 @@ export default function ArtPieceDetails({
 }) {
   return (
     <div>
-      <Image src={imageSource} alt={name} width={400} height={300} />
+      <Image src={imageSource} alt={name} width={400} height={400} />
       <ul>
         <li>Title: {name}</li>
         <li>Artist: {artist}</li>
