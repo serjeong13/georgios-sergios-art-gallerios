@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
+import { ArtProvider } from "../contexts/ArtContext";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -15,7 +16,9 @@ export default function OurApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component data={data} {...pageProps} />
+      <ArtProvider data={data}>
+        <Component {...pageProps} />
+      </ArtProvider>
     </>
   );
 }

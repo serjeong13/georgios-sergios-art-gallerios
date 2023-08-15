@@ -1,7 +1,9 @@
 import ArtPieces from "../components/ArtPieces";
 import Spotlight from "../components/Spotlight";
+import { useArt } from "../contexts/ArtContext";
 
-export default function HomePage({ data }) {
+export default function HomePage() {
+  const data = useArt();
   const spotlightPiece = getRandomArtPiece(data);
 
   return (
