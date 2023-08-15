@@ -1,5 +1,5 @@
 import Spotlight from "../components/Spotlight";
-import { useArt } from "../contexts/ArtContext";
+import useArt from "../contexts/ArtContext";
 
 export default function SpotlightPage() {
   const data = useArt();

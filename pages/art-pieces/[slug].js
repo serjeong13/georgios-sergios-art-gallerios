@@ -1,7 +1,7 @@
 import React from "react";
 import ArtPieceDetails from "../../components/ArtPieceDetails";
 import { useRouter } from "next/router";
-import { useArt } from "../../contexts/ArtContext";
+import useArt from "../../contexts/ArtContext";
 
 export default function DetailedPage() {
   const router = useRouter();

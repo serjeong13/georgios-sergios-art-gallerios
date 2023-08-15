@@ -1,6 +1,6 @@
 import React from "react";
 import ArtPieces from "../../components/ArtPieces";
-import { useArt } from "../../contexts/ArtContext";
+import useArt from "../../contexts/ArtContext";
 
 export default function ArtPiecesList() {
   const artData = useArt();

@@ -1,5 +1,5 @@
 import ArtPiecePreview from "../ArtPiecePreview";
-import { useArt } from "../../contexts/ArtContext";
+import useArt from "../../contexts/ArtContext";
 import Link from "next/link";
 
 export default function ArtPieces() {

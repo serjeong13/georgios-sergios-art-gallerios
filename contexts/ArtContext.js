@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 const ArtContext = createContext();
 
-export function useArt() {
+export default function useArt() {
   return useContext(ArtContext);
 }
 
