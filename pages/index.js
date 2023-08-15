@@ -9,7 +9,6 @@ export default function SpotlightPage() {
     <div>
       <h1>Georgios-Sergios-Smailios-Gallerios</h1>
       <Spotlight data={data} />
-      {/* <ArtPieces pieces={data} /> */}
     </div>
   );
 }
