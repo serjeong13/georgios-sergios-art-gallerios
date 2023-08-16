@@ -25,4 +25,4 @@ export default function CommentForm ({
         <button type="submit">Send</button>
         </form>
     );
-}\
+}

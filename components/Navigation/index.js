@@ -14,6 +14,7 @@ const StyledLink = styled.a`
   color: white;
   margin: 0 20px;
   text-decoration: none;
+  font-size: 1rem;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; /* Color and transform transitions */
   position: relative; /* To position the pseudo-element correctly */
