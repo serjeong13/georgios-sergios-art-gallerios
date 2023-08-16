@@ -7,14 +7,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0 600px;
     font-family: 'Tahoma', sans-serif;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
   }
   h1 {
-    color: #33699;
+    color: #336699;
     background-color: #f0f0f0;
     font-size: 2rem;
     font-weight: 700;
