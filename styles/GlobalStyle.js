@@ -14,10 +14,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: #f0f0f0;
   }
   h1 {
-    color: #336699;
-    background-color: #f0f0f0;
-    font-size: 2rem;
-    font-weight: 700;
+    color: #DAA520;
+    background-color: #000000;
+    text-align: center;
+    font-size: 1.5rem;    // Fixed the comma to a period for the font-size
+    font-weight: 550;
     margin: 0;
     padding: 0;
   }
