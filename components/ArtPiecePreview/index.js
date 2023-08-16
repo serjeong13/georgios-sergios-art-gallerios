@@ -1,11 +1,10 @@
 import Image from "next/image";
 import FavoriteButton from "../FavoriteButton";
 import useArt from "../../contexts/ArtContext";
-
 export default function ArtPiecePreview({ image, title, artist, slug }) {
+  //here we are referring to the variable and function inside our global state
   const {artPiecesInfo, toggleFavorite} = useArt();
   const isFavorite = artPiecesInfo[slug]?.isFavorite || false;
-
   return (
     <div>
       <h3>{title}</h3>
