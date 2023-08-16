@@ -3,6 +3,7 @@ import useSWR from "swr";
 import { ArtProvider } from "../contexts/ArtContext";
 import Layout from "../components/Layout";
 
+//using fetcher function to fetch data from api and return json data with useSWR
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function OurApp({ Component, pageProps }) {

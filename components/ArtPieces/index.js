@@ -1,14 +1,9 @@
 import ArtPiecePreview from "../ArtPiecePreview";
-import useArt from "../../contexts/ArtContext";
 import Link from "next/link";
-
 export default function ArtPieces({pieces}) {
-
   if (!Array.isArray(pieces)) {
     return <div>Loading...</div>;
   }
-
-
   return (
     <ul>
       {pieces.map((piece) => (
